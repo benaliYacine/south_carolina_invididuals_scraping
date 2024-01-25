@@ -1,0 +1,274 @@
+I am interested in extracting data from the website at https://sbs.naic.org/solar-external-lookup/. Specifically, I am
+looking for:
+First Name
+Last Name
+Email
+Phone
+Date Licensed
+Lines of Authority
+...etc
+The data should be filtered to only include individuals with a license domiciled in South Carolina. Once extracted, I
+would like the data to be saved in a CSV format.
+Knowing that:
+i.The program should:
+1.Navigate to https://sbs.naic.org/solar-external-lookup/lookup?jurisdiction=SC&searchType=Licensee&entityType=IND
+2.Wait for the page to load
+4.Click the search button .here is the button element that the code should click :<button _ngcontent-wfd-c87=""
+    type="submit" id="submitBtn" class="btn btn-primary">Search</button>
+5.Wait for the subsequent page to load.
+6.Scrape the data from the displayed table . here is the <sbs-table> element that the code should scrape :<sbs-table
+        _ngcontent-phs-c85="" id="licenseeLookupTable">
+        <div class="row table-header"><sbs-table-max-rows class="col-lg-4 col-md-4 col-sm-12" _nghost-phs-c72="">
+                <form _ngcontent-phs-c72="" novalidate="" class="ng-untouched ng-pristine ng-valid"><label
+                        _ngcontent-phs-c72=""><span _ngcontent-phs-c72="">Show&nbsp;</span><select _ngcontent-phs-c72=""
+                            formcontrolname="rowLimitField" class="rowLimitId ng-untouched ng-pristine ng-valid">
+                            <option _ngcontent-phs-c72="" value="10">10</option>
+                            <option _ngcontent-phs-c72="" value="25">25</option>
+                            <option _ngcontent-phs-c72="" value="50">50</option>
+                            <option _ngcontent-phs-c72="" value="100">100</option><!---->
+                        </select><span _ngcontent-phs-c72="">&nbsp;entries</span></label></form>
+            </sbs-table-max-rows><!---->
+            <div class="entries-showing col-lg-4 col-md-4 col-sm-12">
+                <div>Showing <strong>1</strong> to <strong>10</strong> of <strong>25</strong> entries</div>
+            </div><!---->
+            <div class="col-lg-4 col-md-4 col-sm-12 table-header-right"><sbs-table-filter _nghost-phs-c73=""
+                    class="col-lg-12 col-md-12 col-sm-12">
+                    <div _ngcontent-phs-c73="" class="filter col-lg-9 col-md-12 col-sm-12">
+                        <div _ngcontent-phs-c73="" class="input-group"><span _ngcontent-phs-c73=""
+                                class="input-group-addon filter-icon"><i _ngcontent-phs-c73="" aria-hidden="true"
+                                    class="fa fa-search"></i></span><input _ngcontent-phs-c73="" type="text"
+                                placeholder="Filter" aria-describedby="filterIcon" class="form-control filter-field">
+                        </div>
+                    </div>
+                </sbs-table-filter><!----><!----></div>
+        </div>
+        <div class="row">
+            <div class="col horizontal-scroll">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead _ngcontent-phs-c85="">
+                        <tr _ngcontent-phs-c85="">
+                            <th _ngcontent-phs-c85=""><sbs-table-sort _ngcontent-phs-c85="" sortby="licenseNumber"
+                                    _nghost-phs-c71=""><a _ngcontent-phs-c71="">License
+                                        Number<!----><!----></a></sbs-table-sort></th>
+                            <th _ngcontent-phs-c85=""><sbs-table-sort _ngcontent-phs-c85="" sortby="npn"
+                                    _nghost-phs-c71=""><a _ngcontent-phs-c71="">NPN<!----><!----></a></sbs-table-sort>
+                            </th>
+                            <th _ngcontent-phs-c85=""><sbs-table-sort _ngcontent-phs-c85="" sortby="name"
+                                    defaultsort="asc" _nghost-phs-c71=""><a _ngcontent-phs-c71="">Name<i
+                                            _ngcontent-phs-c71=""
+                                            class="ascIcon fa fa-arrow-up"></i><!----><!----></a></sbs-table-sort></th>
+                            <th _ngcontent-phs-c85=""><sbs-table-sort _ngcontent-phs-c85="" sortby="licenseType"
+                                    _nghost-phs-c71=""><a _ngcontent-phs-c71="">License Type -
+                                        Status<!----><!----></a></sbs-table-sort></th>
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">19909654</td>
+                            <td _ngcontent-phs-c85="">19909654</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/19909654?jurisdiction=SC&amp;entityType=IND&amp;licenseType=PRO">
+                                    MANCILLA NAVARRO JR, ISAAC</a></td>
+                            <td _ngcontent-phs-c85="">Insurance Producer-Active</td>
+                            <td _ngcontent-phs-c85="">06/07/2021</td>
+                            <td _ngcontent-phs-c85="">03/31/2025</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Personal Lines (06/07/2021)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">SPRINGFIELD, VA 22151</td>
+                            <td _ngcontent-phs-c85="">(703) 461-2878</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=19909654&amp;lastName=%20MANCILLA%20NAVARRO%20JR&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">20444939</td>
+                            <td _ngcontent-phs-c85="">20444939</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/20444939?jurisdiction=SC&amp;entityType=IND&amp;licenseType=PRO">
+                                    MARTINEZ HOLT, JASON A</a></td>
+                            <td _ngcontent-phs-c85="">Insurance Producer-Active</td>
+                            <td _ngcontent-phs-c85="">09/02/2022</td>
+                            <td _ngcontent-phs-c85="">01/31/2026</td>
+                            <td _ngcontent-phs-c85="">Yes</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Life (09/02/2022)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">EASLEY, SC 29642</td>
+                            <td _ngcontent-phs-c85="">(864) 506-1799</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=20444939&amp;lastName=%20MARTINEZ%20HOLT&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">20818913</td>
+                            <td _ngcontent-phs-c85="">20818913</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/20818913?jurisdiction=SC&amp;entityType=IND&amp;licenseType=PRO">-MACK-JAMES,
+                                    CHRISTEL</a></td>
+                            <td _ngcontent-phs-c85="">Insurance Producer-Active</td>
+                            <td _ngcontent-phs-c85="">08/16/2023</td>
+                            <td _ngcontent-phs-c85="">07/31/2027</td>
+                            <td _ngcontent-phs-c85="">Yes</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Life (08/16/2023)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">COLUMBIA, SC 29223</td>
+                            <td _ngcontent-phs-c85="">(803) 561-0860</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=20818913&amp;lastName=-MACK-JAMES&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">20656915</td>
+                            <td _ngcontent-phs-c85="">20656915</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/20656915?jurisdiction=SC&amp;entityType=IND&amp;licenseType=ADJ">A
+                                    BODNOVITS, JOHN</a></td>
+                            <td _ngcontent-phs-c85="">Adjuster-Active</td>
+                            <td _ngcontent-phs-c85="">07/11/2023</td>
+                            <td _ngcontent-phs-c85="">08/31/2025</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Casualty (07/11/2023)<br>Property (07/11/2023)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">INDEPENDENCE, OR 97351</td>
+                            <td _ngcontent-phs-c85="">(503) 428-7757</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=20656915&amp;lastName=A%20BODNOVITS&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">20496580</td>
+                            <td _ngcontent-phs-c85="">20496580</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/20496580?jurisdiction=SC&amp;entityType=IND&amp;licenseType=PRO">A
+                                    MANZO, GUADALUPE</a></td>
+                            <td _ngcontent-phs-c85="">Insurance Producer-Active</td>
+                            <td _ngcontent-phs-c85="">11/03/2022</td>
+                            <td _ngcontent-phs-c85="">12/31/2024</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Casualty (11/03/2022)<br>Property (11/03/2022)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">TEMPE, AZ 85281</td>
+                            <td _ngcontent-phs-c85="">(800) 782-8332</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=20496580&amp;lastName=A%20MANZO&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">17338292</td>
+                            <td _ngcontent-phs-c85="">17338292</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/17338292?jurisdiction=SC&amp;entityType=IND&amp;licenseType=PRO">A-HUDSON,
+                                    NOVLET</a></td>
+                            <td _ngcontent-phs-c85="">Insurance Producer-Active</td>
+                            <td _ngcontent-phs-c85="">01/01/2023</td>
+                            <td _ngcontent-phs-c85="">12/31/2024</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Accident &amp; Health or Sickness (06/28/2018)<br>Life
+                                    (06/28/2018)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">MIAMI GARDENS, FL 33169</td>
+                            <td _ngcontent-phs-c85="">(305) 801-1683</td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=17338292&amp;lastName=A-HUDSON&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">19217321</td>
+                            <td _ngcontent-phs-c85="">19217321</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/19217321?jurisdiction=SC&amp;entityType=IND&amp;licenseType=ADJ">AABERG
+                                    HAVERLAND, TANYA</a></td>
+                            <td _ngcontent-phs-c85="">Adjuster-Inactive</td>
+                            <td _ngcontent-phs-c85="">09/01/2021</td>
+                            <td _ngcontent-phs-c85="">08/31/2023</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">NO LINES ASSIGNED</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">MADISON, WI 53783</td>
+                            <td _ngcontent-phs-c85="">(800) 692-6326</td>
+                            <td _ngcontent-phs-c85="">Texas</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=19217321&amp;lastName=AABERG%20HAVERLAND&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr>
+                        <tr _ngcontent-phs-c85="">
+                            <td _ngcontent-phs-c85="">16852056</td>
+                            <td _ngcontent-phs-c85="">16852056</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    href="/solar-external-lookup/lookup/licensee/summary/16852056?jurisdiction=SC&amp;entityType=IND&amp;licenseType=ADJ">AABERG,
+                                    NANCY K</a></td>
+                            <td _ngcontent-phs-c85="">Adjuster-Active</td>
+                            <td _ngcontent-phs-c85="">09/01/2023</td>
+                            <td _ngcontent-phs-c85="">08/31/2025</td>
+                            <td _ngcontent-phs-c85="">No</td>
+                            <td _ngcontent-phs-c85="">
+                                <div _ngcontent-phs-c85="">Casualty (04/08/2014)<br>Property (04/08/2014)</div>
+                            </td>
+                            <td _ngcontent-phs-c85=""></td>
+                            <td _ngcontent-phs-c85="">BLOOMINGTON, IL 61710</td>
+                            <td _ngcontent-phs-c85="">(972) 541-6214</td>
+                            <td _ngcontent-phs-c85="">Texas</td>
+                            <td _ngcontent-phs-c85=""><a _ngcontent-phs-c85="" target="_blank"
+                                    routerlink="/license-manager"
+                                    href="/solar-external-lookup/license-manager?entityType=IND&amp;licenseNumber=16852056&amp;lastName=AABERG&amp;jurisdiction=SC">License
+                                    Manager</a></td><!----><!---->
+                        </tr><!----></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row"><sbs-table-pagination class="col" _nghost-phs-c75="">
+                <nav _ngcontent-phs-c75="" aria-label="Table Pagination">
+                    <ul _ngcontent-phs-c75="" class="pagination justify-content-end">
+                        <li _ngcontent-phs-c75="" class="page-item disabled"><a _ngcontent-phs-c75=""
+                                class="page-link">First</a></li>
+                        <li _ngcontent-phs-c75="" class="page-item disabled"><a _ngcontent-phs-c75=""
+                                class="page-link">Previous</a></li><!----><!---->
+                        <li _ngcontent-phs-c75="" class="page-item active"><span _ngcontent-phs-c75=""
+                                class="page-link">1</span></li>
+                        <li _ngcontent-phs-c75="" class="page-item"><a _ngcontent-phs-c75="" class="page-link">2</a>
+                        </li><!---->
+                        <li _ngcontent-phs-c75="" class="page-item"><a _ngcontent-phs-c75="" class="page-link">3</a>
+                        </li><!---->
+                        <li _ngcontent-phs-c75="" class="page-item"><a _ngcontent-phs-c75="" class="page-link">Next</a>
+                        </li>
+                        <li _ngcontent-phs-c75="" class="page-item"><a _ngcontent-phs-c75="" class="page-link">Last</a>
+                        </li>
+                    </ul>
+                </nav>
+            </sbs-table-pagination><!----></div>
+    </sbs-table>
+    ii.uses Python due to its ease of use and extensive libraries that support web scraping and data extraction.
+    iii.Since the website requires interaction (filling in a form and pressing a button), use headless browser like
+    Selenium . Once the page is loaded, you can use Beautiful Soup to parse and extract the information.
+    So Here's a general roadmap:
+    1.Python: As the main programming language.
+    2.Selenium: To automate web browser interaction.
+    3.BeautifulSoup: To parse HTML and extract data.
+    4.pandas: To handle data and save it as a CSV.
+    iiii.Use Explicit Waits to ensures the driver waits for a specified amount of time until the element is found.
+    Using all of this informations ,write a programme that can do that .

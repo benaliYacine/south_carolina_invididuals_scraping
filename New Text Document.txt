@@ -1,0 +1,33 @@
+I am interested in extracting data from the website at https://sbs.naic.org/solar-external-lookup/. Specifically, I am looking for:
+
+First Name
+Last Name
+Email
+Phone
+Date Licensed
+Lines of Authority
+Other relevant information
+
+
+The data should be filtered to only include individuals with a license domiciled in South Carolina. Once extracted, I would like the data to be saved in a CSV format.
+
+
+So .write a programme that can do that and test it your self (compile it) and debug it until it is working .Knowing that
+i.The program should:
+
+1.Navigate to https://sbs.naic.org/solar-external-lookup/lookup?jurisdiction=SC&searchType=Licensee&entityType=IND
+    2.Wait for the page to load (the provided "first_page.html")
+   4.Click the search button .here is the button element that you the code should click :<button _ngcontent-wfd-c87="" type="submit" id="submitBtn" class="btn btn-primary">Search</button>
+   5.Wait for the subsequent page to load (the provided "second_page.html")
+   6.Scrape the data from the displayed table .
+
+ ii.uses Python due to its ease of use and extensive libraries that support web scraping and data extraction.
+iii.Since the website requires interaction (filling in a form and pressing a button), use headless browser like Selenium . Once the page is loaded, you can use Beautiful Soup to parse and extract the information. 
+So Here's a general roadmap:
+    1.Python: As the main programming language.
+    2.Selenium: To automate web browser interaction.
+    3.BeautifulSoup: To parse HTML and extract data.
+    4.pandas: To handle data and save it as a CSV. 
+iiii.Use Explicit Waits to ensures the driver waits for a specified amount of time until the element is found.
+
+note that the provided html files are just to give an idea about the structure of the pages so visualize them before writiong the code ,but in the same time I do not want the code to use those files to extract the data .No ,it should open the actual website.and follow the explained steps to scrap the data and save it to a csv file

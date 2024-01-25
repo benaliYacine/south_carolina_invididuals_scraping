@@ -1,0 +1,22 @@
+    🛑 Proposal for Data Extraction from https://sbs.naic.org/solar-external-lookup/ 🛑 
+
+Hey there,
+
+ 🔸I've just had a look at the website you mentioned and I've got good news for you: I've already implemented a script that can scrape the data you need! I did a quick test and recorded a short video of it in action, which I've attached for you to see. Right now, the data gets saved to a CSV file, but I can easily modify that to store it directly into a Google Sheets doc just as you've requested.
+
+ 🔸The tech-stack I used is quite straightforward:
+✅1. Python: It’s my go-to for tasks like these due to its flexibility.
+✅2. Selenium: This lets me interact with the website as if I'm manually searching for the records you're interested in.
+✅3. BeautifulSoup: Once I get the data, this helps me sift through it quickly and pick out what we need.
+✅4. pandas: A powerful library that I used to structure the data and get it ready for Google Sheets.
+
+ 🔸And just a bit about me - I mainly work in the electronic engineering field, especially around control systems, robotics, and signal processing. But I also enjoy dabbling in data scraping and have done quite a few similar tasks before. Beyond Python, I have experience with MATLAB, C++, ROS, and even designing PCBs. If you ever have projects in those domains, I'd be happy to help. 
+
+ 🔴 If everything sounds good to you, once you hire me, I’ll send you the source code along with the data in Google Sheets immediately.
+
+ 🔸If you have any questions or need more information, please don’t hesitate to reach out. 
+
+ 🔸Thank you for considering my proposal, and I hope to hear from you soon!
+
+Warm regards,
+Abderahmane

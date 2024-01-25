@@ -1,0 +1,27 @@
+I can do this today.
+
+
+     🛑Proposal for Data Scrapper Tool Into Excel Project🛑
+
+Hey there,
+
+🔸I hope you're doing well. Based on your requirements, you're in need of a data scraping tool that extracts specific information from ac.UK domains. I have just the right skills and experience to help you out with this.
+
+🔸Recently, I worked on a similar project, where I extracted data from the website at https://sbs.naic.org/solar-external-lookup/. The extracted data included details like First Name, Last Name, Email, Phone, Date Licensed, Lines of Authority, and other relevant info. I ensured the data was filtered to focus on individuals with a license domiciled in South Carolina. To give you a better understanding of how I accomplished it, I've attached the source code with a video of the script in action. This way, you can visualize my expertise in real-time.
+
+🔸The tech-stack I used for that project is:
+
+✅ Python: Always my first choice because of its versatility.
+✅ Selenium: Lets me engage with the website just as if I'm doing it manually.
+✅ BeautifulSoup: Aids in swiftly navigating through the data and extracting what's needed.
+✅ pandas: Helps in structuring the data, making it Excel-ready.
+
+
+🔸And just a bit about me - I mainly work in the electronic engineering field, especially around control systems, robotics, and signal processing. But I also enjoy dabbling in data scraping and have done quite a few similar tasks before. Beyond Python, I have experience with MATLAB, C++, ROS, and even designing PCBs. If you ever have projects in those domains, I'd be happy to help. 
+
+ 🔸If you have any questions or need more information, please don’t hesitate to reach out. 
+
+ 🔸Thank you for considering my proposal, and I hope to hear from you soon!
+
+Best wishes,
+Abderahmane
